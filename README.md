@@ -22,4 +22,4 @@ Before running the application, make sure you have the following prerequisites i
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Fabricio2210org/filetransfer.git
+   git clone https://github.com/Fabricio2210/filetransfer.git
