@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/Fabricio2210org/filetransfer.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/Fabricio2210/filetransfer.git']]])
             }
         }
 
         stage('Build') {
             steps {
                 sh 'go get -v'
-                sh 'go build -o filetransfer'
+                sh 'go build -o gofiber'
             }
         }
 
