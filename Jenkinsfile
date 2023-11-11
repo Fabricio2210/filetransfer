@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'go get -v'
-                sh 'go build -o gofiber'
+                sh 'go build -o filetransfer'
             }
         }
 
