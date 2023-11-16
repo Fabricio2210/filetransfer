@@ -10,10 +10,10 @@ import (
 func main() {
 	c := cron.New()
 	c.AddFunc("0 05 18 * *", func() {
-		wrapper.Wrapper("../chatpy/dsp/superchats", "../superchatExc/dsp/superchats", "_superchats", "json")
+		wrapper.Wrapper("../chatpy/dsp/superchats", "../superchatexc/dsp/superchats", "_superchats", "json")
 	})
 	c.AddFunc("0 07 18 * *", func() {
-		wrapper.Wrapper("../chatpy/doody/superchats", "../superchatExc/doody/superchats", "_superchats", "json")
+		wrapper.Wrapper("../chatpy/doody/superchats", "../superchatexc/doody/superchats", "_superchats", "json")
 	})
 
 	c.AddFunc("0 00 11 * *", func() {
@@ -97,16 +97,16 @@ func main() {
 		clearfolders.ClearFolders("../chatlogs/channels/WPIG")
 	})
 	c.AddFunc("0 14 10 * *", func() {
-		clearfolders.ClearFolders("../superchatExc/dsp/excel")
+		clearfolders.ClearFolders("../superchatexc/dsp/excel")
 	})
 	c.AddFunc("0 15 10 * *", func() {
-		clearfolders.ClearFolders("../superchatExc/doody/excel")
+		clearfolders.ClearFolders("../superchatexc/doody/excel")
 	})
 	c.AddFunc("0 16 10 * *", func() {
-		clearfolders.ClearFolders("../superchatExc/dsp/superchats")
+		clearfolders.ClearFolders("../superchatexc/dsp/superchats")
 	})
 	c.AddFunc("0 17 10 * *", func() {
-		clearfolders.ClearFolders("../superchatExc/doody/superchats")
+		clearfolders.ClearFolders("../superchatexc/doody/superchats")
 	})
 	c.Start()
 	fmt.Println("Running transferFiles")
