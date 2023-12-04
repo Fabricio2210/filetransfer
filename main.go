@@ -13,9 +13,11 @@ func main() {
 		wrapper.Wrapper("../chatpy/dsp/superchats", "../superchatexc/dsp/superchats", "_superchats", "json")
 	})
 	c.AddFunc("0 07 18 * *", func() {
+		wrapper.Wrapper("../chatpy/reacts/superchats", "../superchatexc/reacts/superchats", "_superchats", "json")
+	})
+	c.AddFunc("0 09 18 * *", func() {
 		wrapper.Wrapper("../chatpy/doody/superchats", "../superchatexc/doody/superchats", "_superchats", "json")
 	})
-
 	c.AddFunc("0 00 11 * *", func() {
 		wrapper.Wrapper("../chatpy/dsp/chatlogs", "../chatlogs/channels/DSP", "", "txt")
 	})
