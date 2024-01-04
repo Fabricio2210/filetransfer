@@ -111,6 +111,6 @@ func main() {
 		clearfolders.ClearFolders("../superchatexc/doody/superchats")
 	})
 	c.Start()
-	fmt.Println("Running transferFiles!!!")
+	fmt.Println("Running transferFiles!!")
 	<-make(chan struct{})
 }
