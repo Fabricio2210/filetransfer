@@ -18,6 +18,9 @@ func main() {
 	c.AddFunc("0 09 18 * *", func() {
 		wrapper.Wrapper("../chatpy/doody/superchats", "../superchatexc/doody/superchats", "_superchats", "json")
 	})
+	c.AddFunc("0 10 18 * *", func() {
+		wrapper.Wrapper("../chatpy/throwback/superchats", "../superchatexc/throwback/superchats", "_superchats", "json")
+	})
 	c.AddFunc("0 00 11 * *", func() {
 		wrapper.Wrapper("../chatpy/dsp/chatlogs", "../chatlogs/channels/DSP", "", "txt")
 	})
@@ -57,7 +60,9 @@ func main() {
 	c.AddFunc("0 13 11 * *", func() {
 		wrapper.Wrapper("../chatpy/wpig/chatlogs", "../chatlogs/channels/WPIG", "", "txt")
 	})
-
+	c.AddFunc("0 14 11 * *", func() {
+		wrapper.Wrapper("../chatpy/throwback/chatlogs", "../chatlogs/channels/THROWBACK", "", "txt")
+	})
 	// Clear folders
 	c.AddFunc("0 01 10 * *", func() {
 		clearfolders.ClearFolders("../chatlogs/channels/DSP")
@@ -109,6 +114,12 @@ func main() {
 	})
 	c.AddFunc("0 17 10 * *", func() {
 		clearfolders.ClearFolders("../superchatexc/doody/superchats")
+	})
+	c.AddFunc("0 18 10 * *", func() {
+		clearfolders.ClearFolders("../chatlogs/channels/THROWBACK")
+	})
+	c.AddFunc("0 19 10 * *", func() {
+		clearfolders.ClearFolders("../superchatexc/throwback/superchats")
 	})
 	c.Start()
 	fmt.Println("Running transferFiles!!")
