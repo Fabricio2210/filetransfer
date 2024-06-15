@@ -63,6 +63,9 @@ func main() {
 	c.AddFunc("0 14 11 * *", func() {
 		wrapper.Wrapper("../chatpy/throwback/chatlogs", "../chatlogs/channels/THROWBACK", "", "txt")
 	})
+	c.AddFunc("0 15 11 * *", func() {
+		wrapper.Wrapper("../chatpy/pop/chatlogs", "../chatlogs/channels/POP", "", "txt")
+	})
 	// Clear folders
 	c.AddFunc("0 01 10 * *", func() {
 		clearfolders.ClearFolders("../chatlogs/channels/DSP")
@@ -120,6 +123,9 @@ func main() {
 	})
 	c.AddFunc("0 19 10 * *", func() {
 		clearfolders.ClearFolders("../superchatexc/throwback/superchats")
+	})
+	c.AddFunc("0 20 10 * *", func() {
+		clearfolders.ClearFolders("../chatlogs/channels/POP")
 	})
 	c.Start()
 	fmt.Println("Running transferFiles")
